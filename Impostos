@@ -1,0 +1,59 @@
+Var
+// Seção de Declarações das variáveis 
+sbruto:real
+sliquido:real
+irrf:real
+inss:real
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+  Escreval ("Vamos calcular os impostos presentes em seu salário.")
+   Escreval ("Qual seu salario bruto?")
+   leia (sbruto)
+  //Calculo IRRF
+
+   SE (sbruto < 2112.01) ENTAO
+      irrf <- 0
+   SENAO
+    SE(sbruto < 2826.66) ENTAO
+       irrf <- 158.4
+    SENAO
+      SE(sbruto < 3751.06) ENTAO
+             irrf <- 370.4
+      SENAO
+        SE (sbruto < 4664.69) ENTAO
+             irrf <- 651.73
+        SENAO
+             irrf <- 884.96
+             FIMSE
+        FIMSE
+     FIMSE
+   FIMSE
+   
+   //Calculo INSS
+   SE (sbruto < 1412.01) ENTAO
+   inss <- sbruto * 0.075
+   SENAO
+     SE (sbruto < 2666.69) ENTAO
+        inss <- sbruto * 0.09
+     SENAO
+         SE (sbruto < 4000.04) ENTAO
+           inss <- sbruto * 0.12
+         SENAO
+             inss <- sbruto * 0.14
+         FIMSE
+     FIMSE
+   FIMSE
+
+   //Calculo Salario Liquido
+
+sliquido <- sbruto - inss - irrf
+
+//Final
+
+Escreval ("Seu salário Liquído é de ", sliquido)
+Escreval (" com os seguintes impostos:")
+Escreval ("IRRF = ", irrf)
+Escreval ("INSS = ", inss)
+
+Fimalgoritmo
