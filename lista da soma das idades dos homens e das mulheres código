@@ -1,0 +1,69 @@
+x:inteiro
+nome:caractere
+idade:inteiro
+total:inteiro
+sexo:caractere
+total_masc:inteiro
+total_fem:inteiro
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+ PARA x de 1 ate 6 faca
+  ESCREVAL("Qual é seu nome?")
+  LEIA(nome)
+  ESCREVAL("Qual é sua idade?")
+  LEIA(idade)
+  ESCREVAL("Qual é seu sexo?")
+  LEIA(sexo)
+ SE (sexo = "feminino") ENTAO
+  total_fem <- total_fem + idade
+ SENAO
+  total_masc <- total_masc + idade
+ FIMSE
+ FIMPARA
+ ESCREVAL("TOTAL GERAL FEMININO = " , total_fem)
+ ESCREVAL("TOTAL GERAL MASCULINO = " , total_masc)
+
+Fimalgoritmo
+
+Execução:
+Qual é seu nome?
+Beatriz
+Qual é sua idade?
+16
+Qual é seu sexo?
+feminino
+Qual é seu nome?
+Yasmin
+Qual é sua idade?
+17
+Qual é seu sexo?
+feminino
+Qual é seu nome?
+Lara
+Qual é sua idade?
+10
+Qual é seu sexo?
+feminino
+Qual é seu nome?
+Lucas
+Qual é sua idade?
+5
+Qual é seu sexo?
+masculino
+Qual é seu nome?
+Joao
+Qual é sua idade?
+32
+Qual é seu sexo?
+masculino
+Qual é seu nome?
+Gustavo
+Qual é sua idade?
+15
+Qual é seu sexo?
+masculino
+TOTAL GERAL FEMININO =  43
+TOTAL GERAL MASCULINO =  52
+
+>>> Fim da execução do programa !
