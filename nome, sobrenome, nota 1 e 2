@@ -1,0 +1,34 @@
+Var
+// Seção de Declarações das variáveis 
+x:inteiro
+nomes:vetor [1..5] de caractere
+sobrenomes:vetor [1..5] de caractere
+notas1:vetor [1..5] de real
+notas2:vetor [1..5] de real
+resposta:inteiro
+
+
+
+Inicio
+// Seção de Comandos, procedimento, funções, operadores, etc... 
+ resposta <- 1
+ PARA x de 1 ate 5 FACA
+   ESCREVAL("Digite o " , x , "º nome:")
+   LEIA(nomes[x])
+   ESCREVAL("Digite o " , x , "° sobrenome: ")
+   LEIA(sobrenomes[x])
+   ESCREVAL("Digite a nota1 do " , x , "° aluno:")
+   LEIA(notas1[x])
+   ESCREVAL("Digite a nota2 do " , x , "° aluno:")
+   LEIA(notas2[x])
+   ESCREVAL("")
+   LIMPATELA
+ FIMPARA
+ ESCREVAL("QUAL ALUNO DESEJA MOSTRAR OS DADOS?")
+ LEIA(resposta)
+ 
+ ESCREVAL("Nome = " , nomes[resposta])
+ ESCREVAL("Sobrenome = " , sobrenomes[resposta])
+ ESCREVAL("Nota1 = " , notas1[resposta])
+ ESCREVAL("Nota2 = " , notas2[resposta])
+Fimalgoritmo
